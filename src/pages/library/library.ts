@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Quote } from '../../data/quote.interface';
 import quotes from '../../data/quotes';
+import { QuotesPage } from './../quotes/quotes';
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-library',
@@ -8,8 +11,16 @@ import quotes from '../../data/quotes';
 })
 export class LibraryPage implements OnInit {
   quoteCollection: {category: string, quotes: Quote[], icon: string}[];
+  quotesPage: QuotesPage;
+
+  constructor(public navCtrl: NavController) {
+  }
 
   ngOnInit() {
     this.quoteCollection = quotes;
+  }
+
+  openQuoteGroup(quoteGroup) {
+    this.navCtrl.push(QuotesPage, quoteGroup);
   }
 }
