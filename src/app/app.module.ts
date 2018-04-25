@@ -1,3 +1,4 @@
+import { QuotesService } from './../services/quotes';
 import { SettingsPage } from './../pages/settings/settings';
 import { FavoritesPage } from './../pages/favorites/favorites';
 import { QuotesPage } from './../pages/quotes/quotes';
@@ -49,6 +50,7 @@ import { QuotePage } from '../pages/quote/quote';
   providers: [
     StatusBar,
     SplashScreen,
+    QuotesService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
