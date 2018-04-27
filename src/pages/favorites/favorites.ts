@@ -2,10 +2,9 @@ import { SettingsService } from './../../services/settings';
 import { QuotePage } from './../quote/quote';
 import { QuotesService } from './../../services/quotes';
 import { Component } from '@angular/core';
-import { IonicPage, ModalController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 import { Quote } from '../../data/quote.interface';
 
-@IonicPage()
 @Component({
   selector: 'page-favorites',
   templateUrl: 'favorites.html',
